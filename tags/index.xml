@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Jane - A super concise theme for Hugo</title>
+    <title>Tags on slm的研发笔记</title>
     <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on Jane - A super concise theme for Hugo</description>
+    <description>Recent content in Tags on slm的研发笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
@@ -179,6 +179,15 @@
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/themes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>微信</title>
+      <link>http://localhost:1313/tags/%E5%BE%AE%E4%BF%A1/</link>
+      <pubDate>Fri, 14 Sep 2018 10:43:33 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/%E5%BE%AE%E4%BF%A1/</guid>
       <description></description>
     </item>
     

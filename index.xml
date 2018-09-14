@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jane - A super concise theme for Hugo</title>
+    <title>slm的研发笔记</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Jane - A super concise theme for Hugo</description>
+    <description>Recent content on slm的研发笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate>
@@ -30,6 +30,39 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>微信体系梳理</title>
+      <link>http://localhost:1313/post/%E5%BE%AE%E4%BF%A1%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Fri, 14 Sep 2018 10:43:33 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%BE%AE%E4%BF%A1%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;微信体系梳理&#34;&gt;微信体系梳理&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;微信开放平台是微信体系的总称&lt;/strong&gt;
+open.weixin.com
+下面包含
+- 网站应用  web
+- 移动应用 app
+- 公众账号  对应公众平台（也就是公众号）
+- 第三方平台 一般来说是帮助用户运行公众号的的&lt;/p&gt;
+
+&lt;h3 id=&#34;公众账号-叫做公众平台-公众号是个总称&#34;&gt;公众账号  叫做公众平台  公众号是个总称&lt;/h3&gt;
+
+&lt;p&gt;mp.weixin.com
+里面包含
+- 订阅号  &amp;ndash;天天发文章的那种  一天一篇群发消息限制
+- 服务号 –类似招行银行信用卡 为公众提供服务的  一个月4篇群发消息限制
+- 企业号（后来改名为企业微信）  &amp;ndash; 需要先邀请用户才能参与的 适用用企业内部适用
+- 小程序 –为了解决服务号的网页在浏览器中性能卡顿而出的一种专门解决技术问题的公众号类型。&lt;br /&gt;
+    一次支付行为可以可以下发3条消息
+    一次form提交行为可以在7天内发送1条消息&lt;/p&gt;
 </description>
       
     </item>
