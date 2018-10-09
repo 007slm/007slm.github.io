@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://007slm.github.io/sitemap.xml
+Sitemap: https://007slm.github.io/sitemap.xml

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>微信 on slm的研发笔记</title>
-    <link>http://007slm.github.io/tags/%E5%BE%AE%E4%BF%A1/</link>
+    <link>https://007slm.github.io/tags/%E5%BE%AE%E4%BF%A1/</link>
     <description>Recent content in 微信 on slm的研发笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 14 Sep 2018 10:43:33 +0800</lastBuildDate>
     
-	<atom:link href="http://007slm.github.io/tags/%E5%BE%AE%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://007slm.github.io/tags/%E5%BE%AE%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>微信体系梳理</title>
-      <link>http://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/</link>
+      <link>https://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/</link>
       <pubDate>Fri, 14 Sep 2018 10:43:33 +0800</pubDate>
       
-      <guid>http://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/</guid>
+      <guid>https://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/</guid>
       <description>微信体系梳理 微信开放平台是微信体系的总称 open.weixin.com 下面包含 - 网站应用 web - 移动应用 app - 公众账号 对应公众平台（也就是公众号） - 第三方平台 一般来说是帮助用</description>
     </item>
     
