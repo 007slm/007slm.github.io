@@ -134,7 +134,7 @@
         
           
           
-            <a class="menu-item-link" href="https://007slm.github.io/about/">About</a>
+            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
           
         
       </li>
@@ -265,7 +265,7 @@
         
           
           
-            <a class="menu-item-link" href="https://007slm.github.io/about/">About</a>
+            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
           
 
         
@@ -296,6 +296,10 @@
         
 
         
+        
+          <span id="busuanzi_container_page_pv">
+            | 阅读 <span id="busuanzi_value_page_pv"></span>
+          </span>
         
 
         
@@ -335,18 +339,16 @@
 
 <h4 id="java代码部分">java代码部分</h4>
 
-<blockquote>
 <pre><code>for (int i =0;i&lt;10;i++) {
-  try {
-      TimeUnit.SECONDS.sleep(1);
-  } catch (InterruptedException e) {
-      e.printStackTrace();
-  }
-  writer.print(i);
-  writer.flush();
+    try {
+        TimeUnit.SECONDS.sleep(1);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    writer.print(i);
+    writer.flush();
 }
 </code></pre>
-</blockquote>
 
 <p>重点写一个trunk后要及时flush</p>
 
@@ -354,26 +356,24 @@
 
 <p>得益于fetch api中关于getReader的能力 可以让我们及时读取每个分片（trunk）的数据</p>
 
-<blockquote>
-<pre><code>  fetch(require.toUrl(&quot;$UI/demo/mock.j&quot;)).then(function (response) {
-      let reader = response.body.getReader();
-      let decoder = new TextDecoder();
-      return readData();
-      function readData() {
-          return reader.read().then(function (data) {
-              var value = data.value,done = data.done;
-              value = new TextDecoder(&quot;utf-8&quot;).decode(value);
-              console.log(value);
-              if (done) {
-                  console.log('Stream complete');
-                  return;
-              }
-              return readData();
-          });
-      }
-  });
+<pre><code>fetch(require.toUrl(&quot;$UI/demo/mock.j&quot;)).then(function (response) {
+    let reader = response.body.getReader();
+    let decoder = new TextDecoder();
+    return readData();
+    function readData() {
+        return reader.read().then(function (data) {
+            var value = data.value,done = data.done;
+            value = new TextDecoder(&quot;utf-8&quot;).decode(value);
+            console.log(value);
+            if (done) {
+                console.log('Stream complete');
+                return;
+            }
+            return readData();
+        });
+    }
+});
 </code></pre>
-</blockquote>
 
 <h4 id="效果如下">效果如下：</h4>
 
@@ -429,7 +429,27 @@
 
   
 
-  
+  <div class="post bg-white">
+      <div id="comments-gitment"></div>
+      <link rel="stylesheet" href="/lib/gitment/gitment-0.0.3.min.css">
+        <script src="/lib/gitment/gitment-0.0.3.min.js"></script>
+      <script type="text/javascript">
+      const gitment = new Gitment({
+        id: '后端分片数据传输实现进度条能力.md',
+        title: '关于后端进度条的实现',
+        link: decodeURI(location.href),
+        desc: '关于后端进度条的实现 java代码部分 for (int i =0;i\x26lt;10;i\x2b\x2b) { try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); } writer.print(i); writer.flush(); } 重点写一个trunk后要及时flush js部分 得益于fetch api',
+        owner: '007slm',
+        repo: '007slm.github.io',
+        oauth: {
+          client_id: '951384fae5f8fdbe87ae',
+          client_secret: 'ba1bfd5ff22c74a967648ce7e10de50b279ae231'
+        }
+      })
+      gitment.render('comments-gitment')
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+    </div>
 
   
 
@@ -439,56 +459,14 @@
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:your@email.com" rel="me noopener" class="iconfont icon-email"
+      <a href="mailto:007slm@163.com" rel="me noopener" class="iconfont icon-email"
         title="email" target="_blank">
       </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-stack-overflow"
-        title="stack-overflow" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-twitter"
-        title="twitter" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-facebook"
-        title="facebook" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-linkedin"
-        title="linkedin" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-google"
-        title="google" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-github"
+      <a href="https://github.com/007slm" rel="me noopener" class="iconfont icon-github"
         title="github" target="_blank">
       </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-weibo"
-        title="weibo" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-zhihu"
-        title="zhihu" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-douban"
-        title="douban" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-pocket"
-        title="pocket" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-tumblr"
-        title="tumblr" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-instagram"
-        title="instagram" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-gitlab"
-        title="gitlab" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-goodreads"
-        title="goodreads" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-coding"
+      <a href="https://gitee.com/007slm" rel="me noopener" class="iconfont icon-coding"
         title="coding" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-bilibili"
-        title="bilibili" target="_blank">
       </a>
   <a href="https://007slm.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="iconfont icon-rss"
     title="rss" target="_blank">
@@ -506,8 +484,6 @@
 
   <span class="copyright-year">
     &copy;
-    
-      2017 -
     2018
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -517,6 +493,10 @@
       </span></span>
 
   
+  
+    <span id="busuanzi_container">
+      访客数/访问量：<span id="busuanzi_value_site_uv"></span>/<span id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
 
@@ -543,6 +523,8 @@
 
 
 
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

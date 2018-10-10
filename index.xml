@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>About</title>
+      <title>关于</title>
       <link>https://007slm.github.io/about/</link>
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
@@ -47,18 +47,16 @@
 
 &lt;h4 id=&#34;java代码部分&#34;&gt;java代码部分&lt;/h4&gt;
 
-&lt;blockquote&gt;
 &lt;pre&gt;&lt;code&gt;for (int i =0;i&amp;lt;10;i++) {
-  try {
-      TimeUnit.SECONDS.sleep(1);
-  } catch (InterruptedException e) {
-      e.printStackTrace();
-  }
-  writer.print(i);
-  writer.flush();
+    try {
+        TimeUnit.SECONDS.sleep(1);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    writer.print(i);
+    writer.flush();
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;重点写一个trunk后要及时flush&lt;/p&gt;
 
@@ -66,26 +64,24 @@
 
 &lt;p&gt;得益于fetch api中关于getReader的能力 可以让我们及时读取每个分片（trunk）的数据&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;  fetch(require.toUrl(&amp;quot;$UI/demo/mock.j&amp;quot;)).then(function (response) {
-      let reader = response.body.getReader();
-      let decoder = new TextDecoder();
-      return readData();
-      function readData() {
-          return reader.read().then(function (data) {
-              var value = data.value,done = data.done;
-              value = new TextDecoder(&amp;quot;utf-8&amp;quot;).decode(value);
-              console.log(value);
-              if (done) {
-                  console.log(&#39;Stream complete&#39;);
-                  return;
-              }
-              return readData();
-          });
-      }
-  });
+&lt;pre&gt;&lt;code&gt;fetch(require.toUrl(&amp;quot;$UI/demo/mock.j&amp;quot;)).then(function (response) {
+    let reader = response.body.getReader();
+    let decoder = new TextDecoder();
+    return readData();
+    function readData() {
+        return reader.read().then(function (data) {
+            var value = data.value,done = data.done;
+            value = new TextDecoder(&amp;quot;utf-8&amp;quot;).decode(value);
+            console.log(value);
+            if (done) {
+                console.log(&#39;Stream complete&#39;);
+                return;
+            }
+            return readData();
+        });
+    }
+});
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
 
 &lt;h4 id=&#34;效果如下&#34;&gt;效果如下：&lt;/h4&gt;
 
@@ -147,7 +143,7 @@ open.weixin.com
     <item>
       <title>nginx &#43; openresty 备忘</title>
       <link>https://007slm.github.io/post/openresty%E7%9B%B8%E5%85%B3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Sep 2018 11:30:16 +0800</pubDate>
       
       <guid>https://007slm.github.io/post/openresty%E7%9B%B8%E5%85%B3/</guid>
       

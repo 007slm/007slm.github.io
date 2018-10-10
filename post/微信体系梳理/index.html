@@ -134,7 +134,7 @@
         
           
           
-            <a class="menu-item-link" href="https://007slm.github.io/about/">About</a>
+            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
           
         
       </li>
@@ -265,7 +265,7 @@
         
           
           
-            <a class="menu-item-link" href="https://007slm.github.io/about/">About</a>
+            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
           
 
         
@@ -290,12 +290,16 @@
       <div class="post-meta">
         <span class="post-time"> 2018-09-14 </span>
         <div class="post-category">
-            <a href="https://007slm.github.io/categories/development/"> Development </a>
+            <a href="https://007slm.github.io/categories/%E5%BC%80%E5%8F%91/"> 开发 </a>
             
           </div>
         
 
         
+        
+          <span id="busuanzi_container_page_pv">
+            | 阅读 <span id="busuanzi_value_page_pv"></span>
+          </span>
         
 
         
@@ -402,7 +406,27 @@ open.weixin.com
 
   
 
-  
+  <div class="post bg-white">
+      <div id="comments-gitment"></div>
+      <link rel="stylesheet" href="/lib/gitment/gitment-0.0.3.min.css">
+        <script src="/lib/gitment/gitment-0.0.3.min.js"></script>
+      <script type="text/javascript">
+      const gitment = new Gitment({
+        id: '微信体系梳理.md',
+        title: '微信体系梳理',
+        link: decodeURI(location.href),
+        desc: '微信体系梳理 微信开放平台是微信体系的总称 open.weixin.com 下面包含 - 网站应用 web - 移动应用 app - 公众账号 对应公众平台（也就是公众号） - 第三方平台 一般来说是帮助用',
+        owner: '007slm',
+        repo: '007slm.github.io',
+        oauth: {
+          client_id: '951384fae5f8fdbe87ae',
+          client_secret: 'ba1bfd5ff22c74a967648ce7e10de50b279ae231'
+        }
+      })
+      gitment.render('comments-gitment')
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+    </div>
 
   
 
@@ -412,56 +436,14 @@ open.weixin.com
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:your@email.com" rel="me noopener" class="iconfont icon-email"
+      <a href="mailto:007slm@163.com" rel="me noopener" class="iconfont icon-email"
         title="email" target="_blank">
       </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-stack-overflow"
-        title="stack-overflow" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-twitter"
-        title="twitter" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-facebook"
-        title="facebook" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-linkedin"
-        title="linkedin" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-google"
-        title="google" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-github"
+      <a href="https://github.com/007slm" rel="me noopener" class="iconfont icon-github"
         title="github" target="_blank">
       </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-weibo"
-        title="weibo" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-zhihu"
-        title="zhihu" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-douban"
-        title="douban" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-pocket"
-        title="pocket" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-tumblr"
-        title="tumblr" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-instagram"
-        title="instagram" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-gitlab"
-        title="gitlab" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-goodreads"
-        title="goodreads" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-coding"
+      <a href="https://gitee.com/007slm" rel="me noopener" class="iconfont icon-coding"
         title="coding" target="_blank">
-      </a>
-      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-bilibili"
-        title="bilibili" target="_blank">
       </a>
   <a href="https://007slm.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="iconfont icon-rss"
     title="rss" target="_blank">
@@ -479,8 +461,6 @@ open.weixin.com
 
   <span class="copyright-year">
     &copy;
-    
-      2017 -
     2018
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -490,6 +470,10 @@ open.weixin.com
       </span></span>
 
   
+  
+    <span id="busuanzi_container">
+      访客数/访问量：<span id="busuanzi_value_site_uv"></span>/<span id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
 
@@ -516,6 +500,8 @@ open.weixin.com
 
 
 
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

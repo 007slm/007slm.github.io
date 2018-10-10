@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on slm的研发笔记</title>
+    <link>https://007slm.github.io/tags/nginx/</link>
+    <description>Recent content in Nginx on slm的研发笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Sep 2018 11:30:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://007slm.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>nginx &#43; openresty 备忘</title>
+      <link>https://007slm.github.io/post/openresty%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Sun, 09 Sep 2018 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/openresty%E7%9B%B8%E5%85%B3/</guid>
+      <description>nginx + openresty 备忘 nginx的开发者提供了一种简单、粗暴的方式来实现日志文件的切换。来自官网的一篇文章Log Rotation介绍了这种方法，核心脚本</description>
+    </item>
+    
+  </channel>
+</rss>

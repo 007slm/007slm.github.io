@@ -21,11 +21,20 @@
     </item>
     
     <item>
-      <title>Nginx Openresty</title>
-      <link>https://007slm.github.io/tags/nginx-openresty/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Nginx</title>
+      <link>https://007slm.github.io/tags/nginx/</link>
+      <pubDate>Sun, 09 Sep 2018 11:30:16 +0800</pubDate>
       
-      <guid>https://007slm.github.io/tags/nginx-openresty/</guid>
+      <guid>https://007slm.github.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Openresty</title>
+      <link>https://007slm.github.io/tags/openresty/</link>
+      <pubDate>Sun, 09 Sep 2018 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/tags/openresty/</guid>
       <description></description>
     </item>
     
