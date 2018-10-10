@@ -31,6 +31,13 @@
   </url>
   
   <url>
+    <loc>https://007slm.github.io/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-09-09T11:30:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://007slm.github.io/post/openresty%E7%9B%B8%E5%85%B3/</loc>
     <lastmod>2018-09-09T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -39,6 +46,13 @@
   
   <url>
     <loc>https://007slm.github.io/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://007slm.github.io/tags/git/</loc>
+    <lastmod>2018-09-09T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -73,7 +87,7 @@
   
   <url>
     <loc>https://007slm.github.io/tags/</loc>
-    <lastmod>2018-10-09T11:30:16+08:00</lastmod>
+    <lastmod>2018-09-09T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
