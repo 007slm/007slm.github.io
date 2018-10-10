@@ -82,9 +82,9 @@ defaultContentLanguage = "en"           # Default language to use
     clientSecret = "ba1bfd5ff22c74a967648ce7e10de50b279ae231"       # Your client secret
 
   [params.reward]                                         # 文章打赏
-    enable = false
-    wechat = "/image/wechat.png"           # 微信二维码
-    alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
+    enable = true
+    wechat = "/image/wechat.jpg"           # 微信二维码
+    alipay = "/image/alipay.jpg"           # 支付宝二维码
     
   [params.counter.busuanzi]  # a Chinese visitor counter  # 不蒜子计数器
     enable = true
