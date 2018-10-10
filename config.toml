@@ -68,7 +68,7 @@ defaultContentLanguage = "en"           # Default language to use
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
   customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
-  customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
+  customJS = ['busuanzi.pure.mini.js']             # if ['custom.js'], load '/static/js/custom.js' file
   
   [params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
     enable = false
@@ -83,10 +83,9 @@ defaultContentLanguage = "en"           # Default language to use
 
   [params.reward]                                         # 文章打赏
     enable = false
-    wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
+    wechat = "/image/wechat.png"           # 微信二维码
     alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
     
-# 不蒜子计数器 vs leancloud 计数器 暂时采用简单方案
   [params.counter.busuanzi]  # a Chinese visitor counter  # 不蒜子计数器
     enable = true
 

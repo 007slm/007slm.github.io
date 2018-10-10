@@ -1,12 +1,11 @@
 ---
-title: "git常用操作"
-date: 2018-10-10T11:30:16+08:00
+title: "git常用命令"
+date: 2018-09-09T11:30:16+08:00
 draft: false
 tags: ["git"]
 categories: ["工具"]
 
 ---
-
 
 ### 创建新的github仓库
 
@@ -28,4 +27,3 @@ git push -u origin master
 git branch --set-upstream-to=origin/master master
 git branch --set-upstream-to=origin/ThirdParty ThirdParty
 git config --global push.default matching
-
