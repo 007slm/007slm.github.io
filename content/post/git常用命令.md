@@ -1,8 +1,8 @@
 ---
 title: "git常用命令"
-date: 2018-09-09T11:30:16+08:00
+date: 2018-10-18T11:30:16+08:00
 draft: false
-tags: ["git"]
+tags: ["k8s"]
 categories: ["工具"]
 
 ---
@@ -35,8 +35,8 @@ categories: ["工具"]
 ### 本地修改了许多文件，其中有些是新增的，因为开发需要这些都不要了，想要丢弃掉，可以使用如下命令：
 - git checkout . #本地所有修改的。没有的提交的，都返回到原来的状态
 - git stash #把所有没有提交的修改暂存到stash里面。可用git stash pop回复。
-- git reset --hard HASH #返回到某个节点，不保留修改。
-- git reset --soft HASH #返回到某个节点。保留修改
+- git reset \-\-hard HASH #返回到某个节点，不保留修改。
+- git reset \-\-soft HASH #返回到某个节点。保留修改
 
 - git clean -df #返回到某个节点
 - git clean 参数
