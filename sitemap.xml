@@ -10,6 +10,27 @@
   </url>
   
   <url>
+    <loc>https://007slm.github.io/post/antlr/</loc>
+    <lastmod>2018-10-26T11:30:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://007slm.github.io/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-10-18T11:30:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://007slm.github.io/post/k8s%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-10-18T11:30:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://007slm.github.io/post/%E5%90%8E%E7%AB%AF%E5%88%86%E7%89%87%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0%E8%BF%9B%E5%BA%A6%E6%9D%A1%E8%83%BD%E5%8A%9B/</loc>
     <lastmod>2018-10-09T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,17 +52,29 @@
   </url>
   
   <url>
-    <loc>https://007slm.github.io/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://007slm.github.io/post/openresty%E7%9B%B8%E5%85%B3/</loc>
     <lastmod>2018-09-09T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://007slm.github.io/post/openresty%E7%9B%B8%E5%85%B3/</loc>
-    <lastmod>2018-09-09T11:30:16+08:00</lastmod>
+    <loc>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://007slm.github.io/tags/antlr/</loc>
+    <lastmod>2018-10-26T11:30:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -51,15 +84,15 @@
   </url>
   
   <url>
-    <loc>https://007slm.github.io/tags/git/</loc>
-    <lastmod>2018-09-09T11:30:16+08:00</lastmod>
+    <loc>https://007slm.github.io/tags/javascript/</loc>
+    <lastmod>2018-10-09T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://007slm.github.io/tags/javascript/</loc>
-    <lastmod>2018-10-09T11:30:16+08:00</lastmod>
+    <loc>https://007slm.github.io/tags/k8s/</loc>
+    <lastmod>2018-10-18T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -80,14 +113,14 @@
   
   <url>
     <loc>https://007slm.github.io/post/</loc>
-    <lastmod>2018-10-09T11:30:16+08:00</lastmod>
+    <lastmod>2018-10-26T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://007slm.github.io/tags/</loc>
-    <lastmod>2018-09-09T11:30:16+08:00</lastmod>
+    <lastmod>2018-10-26T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -101,14 +134,14 @@
   
   <url>
     <loc>https://007slm.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2018-09-14T11:30:16+08:00</lastmod>
+    <lastmod>2018-10-18T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://007slm.github.io/categories/%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2018-10-09T11:30:16+08:00</lastmod>
+    <lastmod>2018-10-26T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
