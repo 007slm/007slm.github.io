@@ -204,6 +204,50 @@ pod id 为console-deploy-7d9dc9f8c5-2lgtc&lt;/p&gt;&lt;/li&gt;
     </item>
     
     <item>
+      <title>nginx日志重新挂载</title>
+      <link>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Fri, 14 Sep 2018 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97/</guid>
+      
+        <description>&lt;p&gt;先移动日志文件&lt;/p&gt;
+
+&lt;p&gt;mv /usr/local/openresty/nginx/logs/access.log /usr/local/openresty/nginx/logs/access.log.20161024&lt;/p&gt;
+
+&lt;p&gt;发送信号重新打开日志文件&lt;/p&gt;
+
+&lt;p&gt;kill -USR1 $(cat /usr/local/openresty/nginx/logs/nginx.pid)&lt;/p&gt;
+
+&lt;p&gt;简单说明一下：&lt;/p&gt;
+
+&lt;p&gt;1、在没有执行kill -USR1 &lt;code&gt;cat ${pid_path}&lt;/code&gt;之前，即便已经对文件执行了mv命令也只是改变了文件的名称，nginx还是会向新命名的文件” access.log.20161024”中照常写入日志数据。原因在于linux系统中，内核是根据文件描述符来找文件的&lt;/p&gt;
+
+&lt;p&gt;2、USR1是自定义信号，也就是进程编写者自己确定收到这个信号该干什么。而在nginx中它自己编写了代码当接到USR1信号的时候让nginx重新打开日志文件（重新打开的日志就是配置文件中设置的位置和名称）&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>ngxin日志数据查询</title>
+      <link>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 14 Sep 2018 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/</guid>
+      
+        <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;查看时间最长的前300个请求
+sed  -e &amp;rsquo;s/&amp;ldquo;//g&amp;rsquo; -e &amp;rsquo;s/?.*$//g&amp;rsquo; access.log | awk &amp;lsquo;{print $6,$1,$2,$3,$4,$5,$6,$10,$11,$12,$13,$14,$15,$16,$20}&amp;rsquo; | sort -rn |grep -v websocket|grep -v qrcodeLogin|grep -v wxEvent|grep -v wxevent| head -n 300&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;最后30000条记录 请求时间排序
+tail -n 30000 access.log | sed  -e &amp;rsquo;s/&amp;ldquo;//g&amp;rsquo; -e &amp;rsquo;s/?.*$//g&amp;rsquo; | grep 20/Nov/2018 | awk &amp;lsquo;{print $10,$1,$2,$3,$4,$5,$6,$10,$11,$12,$13,$14,$15,$16,$20}&amp;rsquo; | sort -rn |awk &amp;lsquo;{print $7,$1,$2,$3,$4,$5,$6,$10,$11,$12,$13,$14,$15,$16,$20}&amp;rsquo; | sort -rn |grep -v websocket|grep -v qrcodeLogin|grep -v wxEvent|grep -v wxevent| head -n 500&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://k.justep.com/?controller=FileViewerController&amp;amp;action=image&amp;amp;file_id=5509&amp;amp;project_id=301&amp;amp;task_id=18850&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>博客发文流程</title>
       <link>https://007slm.github.io/post/%E5%8D%9A%E5%AE%A2%E5%8F%91%E6%96%87%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Fri, 14 Sep 2018 11:30:16 +0800</pubDate>
@@ -556,50 +600,6 @@ syntax: ngx.header.HEADER = VALUE&lt;/p&gt;
  ngx.header.content_type = &amp;lsquo;text/plain&amp;rsquo;;&lt;/p&gt;
 
 &lt;p&gt;ngx.header[&amp;ldquo;X-My-Header&amp;rdquo;] = &amp;lsquo;blah blah&amp;rsquo;;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97/</guid>
-      
-        <description>&lt;p&gt;先移动日志文件&lt;/p&gt;
-
-&lt;p&gt;mv /usr/local/openresty/nginx/logs/access.log /usr/local/openresty/nginx/logs/access.log.20161024&lt;/p&gt;
-
-&lt;p&gt;发送信号重新打开日志文件&lt;/p&gt;
-
-&lt;p&gt;kill -USR1 $(cat /usr/local/openresty/nginx/logs/nginx.pid)&lt;/p&gt;
-
-&lt;p&gt;简单说明一下：&lt;/p&gt;
-
-&lt;p&gt;1、在没有执行kill -USR1 &lt;code&gt;cat ${pid_path}&lt;/code&gt;之前，即便已经对文件执行了mv命令也只是改变了文件的名称，nginx还是会向新命名的文件” access.log.20161024”中照常写入日志数据。原因在于linux系统中，内核是根据文件描述符来找文件的&lt;/p&gt;
-
-&lt;p&gt;2、USR1是自定义信号，也就是进程编写者自己确定收到这个信号该干什么。而在nginx中它自己编写了代码当接到USR1信号的时候让nginx重新打开日志文件（重新打开的日志就是配置文件中设置的位置和名称）&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/</guid>
-      
-        <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;查看时间最长的前300个请求
-sed  -e &amp;rsquo;s/&amp;ldquo;//g&amp;rsquo; -e &amp;rsquo;s/?.*$//g&amp;rsquo; access.log | awk &amp;lsquo;{print $6,$1,$2,$3,$4,$5,$6,$10,$11,$12,$13,$14,$15,$16,$20}&amp;rsquo; | sort -rn |grep -v websocket|grep -v qrcodeLogin|grep -v wxEvent|grep -v wxevent| head -n 300&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;最后30000条记录 请求时间排序
-tail -n 30000 access.log | sed  -e &amp;rsquo;s/&amp;ldquo;//g&amp;rsquo; -e &amp;rsquo;s/?.*$//g&amp;rsquo; | grep 20/Nov/2018 | awk &amp;lsquo;{print $10,$1,$2,$3,$4,$5,$6,$10,$11,$12,$13,$14,$15,$16,$20}&amp;rsquo; | sort -rn |awk &amp;lsquo;{print $7,$1,$2,$3,$4,$5,$6,$10,$11,$12,$13,$14,$15,$16,$20}&amp;rsquo; | sort -rn |grep -v websocket|grep -v qrcodeLogin|grep -v wxEvent|grep -v wxevent| head -n 500&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://k.justep.com/?controller=FileViewerController&amp;amp;action=image&amp;amp;file_id=5509&amp;amp;project_id=301&amp;amp;task_id=18850&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
       
     </item>

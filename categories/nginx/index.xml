@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on slm的研发笔记</title>
+    <link>https://007slm.github.io/categories/nginx/</link>
+    <description>Recent content in Nginx on slm的研发笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 14 Sep 2018 11:30:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://007slm.github.io/categories/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>nginx日志重新挂载</title>
+      <link>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Fri, 14 Sep 2018 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97/</guid>
+      <description>先移动日志文件 mv /usr/local/openresty/nginx/logs/access.log /usr/local/openresty/nginx/logs/access.log.20161024 发送信号重新打开日志文件 kill -USR1 $(cat /usr/local/openresty/nginx/logs/nginx.pid) 简单说明一下： 1、在没有执行kill -USR1 cat ${pid_path}之前，即便已经对文件执行了</description>
+    </item>
+    
+    <item>
+      <title>ngxin日志数据查询</title>
+      <link>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 14 Sep 2018 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/nginx%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/</guid>
+      <description>查看时间最长的前300个请求 sed -e &amp;rsquo;s/&amp;ldquo;//g&amp;rsquo; -e &amp;rsquo;s/?.*$//g&amp;rsquo; access.log | awk &amp;lsquo;{print $6,$1,$2,$3,$4,$5,$6,$10,$11,$12,$13,$14,$15,$16,$20}&amp;rsquo; | sort -rn |grep -v websocket|grep -v qrcodeLogin|grep -v wxEvent|grep -v wxevent| head -n 300 最后30000条记录 请求时间排序 tail -n 30000 access.log | sed -e &amp;rsquo;s/&amp;ldquo;//g&amp;rsquo; -e &amp;rsquo;s/?.*$//g&amp;rsquo; | grep 20/Nov/2018 | awk</description>
+    </item>
+    
+  </channel>
+</rss>
