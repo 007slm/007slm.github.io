@@ -1,3 +1,12 @@
+---
+title: "ngxin日志数据查询"
+date: 2018-09-14T11:30:16+08:00
+draft: false
+categories: ["nginx"]
+comment: true
+
+---
+
 
 - 查看时间最长的前300个请求
 sed  -e 's/"//g' -e 's/?.*$//g' access.log | awk '{print $6,$1,$2,$3,$4,$5,$6,$10,$11,$12,$13,$14,$15,$16,$20}' | sort -rn |grep -v websocket|grep -v qrcodeLogin|grep -v wxEvent|grep -v wxevent| head -n 300

@@ -1,3 +1,12 @@
+---
+title: "nginx日志重新挂载"
+date: 2018-09-14T11:30:16+08:00
+draft: false
+categories: ["nginx"]
+
+---
+
+
 先移动日志文件
 
 mv /usr/local/openresty/nginx/logs/access.log /usr/local/openresty/nginx/logs/access.log.20161024
