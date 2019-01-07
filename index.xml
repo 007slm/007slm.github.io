@@ -56,6 +56,110 @@
     </item>
     
     <item>
+      <title>https连接提示pkix path错误</title>
+      <link>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Fri, 26 Oct 2018 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</guid>
+      
+        <description>
+
+&lt;p&gt;关于java中用httpclient访问https服务报错&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+    at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+    at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+    at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+    at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+    at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1514)
+    at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+    at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1026)
+    at sun.security.ssl.Handshaker.process_record(Handshaker.java:961)
+    at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+    at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+    at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+    at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+    at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+    at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+    at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:153)
+    at TestSecuredConnection.testConnectionTo(TestSecuredConnection.java:30)
+    at TestSecuredConnection.main(TestSecuredConnection.java:16)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+    at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+    at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+    at sun.security.validator.Validator.validate(Validator.java:260)
+    at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+    at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+    at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+    at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1496)
+    ... 12 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+    at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+    at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+    at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+    at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+    ... 18 more
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;主要看这一句，是说没有找到的指定的证书。&lt;/p&gt;
+
+&lt;p&gt;我们知道ssl握手是又服务端返回证书信息，客户端进行校验，这里有个隐藏的规则，因为证书是链式签发的&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;root ca&amp;ndash;&amp;gt;一级ca -—&amp;gt;二级ca &amp;ndash;&amp;gt;我的网站&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;很多用户在部署证书的时候都只部署了自己的证书，这就造成浏览器一般会把受信任的证书补全，类似curl，httpclient等工具会利用操作系统本地的cert列表 eg：/etc/local/cert 来补全公信的证书，某些时候如果操作系统的cert不全或者java的security\cacert里面没有添加公信ca就会出现问题了。（不同版本的jre带的cacert可能会不一样，所以同样的代码 有些环境就不报错）&lt;/p&gt;
+
+&lt;h4 id=&#34;解决办法&#34;&gt;解决办法：&lt;/h4&gt;
+
+&lt;p&gt;服务器部署证书的时候部署全证书链，如下图即为典型的没有添加全证书链&lt;/p&gt;
+
+&lt;p&gt;通过myssl校验证书信息&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/CESb3vS.png&#34; alt=&#34;enter image description here&#34; /&gt;
+在kong的certificate中补全证书链信息后就正常了 用java验证也通过：
+验证代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public void testConnectionTo(String aURL) throws Exception {
+        URL destinationURL = new URL(aURL);
+        HttpsURLConnection conn = (HttpsURLConnection) destinationURL
+                .openConnection();
+        conn.connect();
+        Certificate[] certs = conn.getServerCertificates();
+        for (Certificate cert : certs) {
+            System.out.println(&amp;quot;Certificate is: &amp;quot; + cert);
+            if(cert instanceof X509Certificate) {
+                try {
+                    ( (X509Certificate) cert).checkValidity();
+                    System.out.println(&amp;quot;Certificate is active for current date&amp;quot;);
+                } catch(CertificateExpiredException cee) {
+                    System.out.println(&amp;quot;Certificate is expired&amp;quot;);
+                }
+            }
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;结果：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;[2]: ObjectId: 1.3.6.1.5.5.7.1.1 Criticality=false
+AuthorityInfoAccess [
+  [
+   accessMethod: ocsp
+   accessLocation: URIName: http://ocsp2.digicert.com
+, 
+   accessMethod: caIssuers
+   accessLocation: URIName: http://cacerts.digitalcertvalidation.com/TrustAsiaTLSRSACA.crt
+]
+]
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>git常用命令</title>
       <link>https://007slm.github.io/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 18 Oct 2018 11:30:16 +0800</pubDate>

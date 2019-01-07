@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>https连接提示pkix path错误 - slm的研发笔记</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="007slm" />
+  <meta name="description" content="关于java中用httpclient访问https服务报错 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296) at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1514) at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216) at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1026) at sun.security.ssl.Handshaker.process_record(Handshaker.java:961) at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062) at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387) at" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="https连接提示pkix path错误" />
+<meta property="og:description" content="关于java中用httpclient访问https服务报错 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296) at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1514) at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216) at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1026) at sun.security.ssl.Handshaker.process_record(Handshaker.java:961) at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062) at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387) at" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/" /><meta property="article:published_time" content="2018-10-26T11:30:16&#43;08:00"/>
+<meta property="article:modified_time" content="2018-10-26T11:30:16&#43;08:00"/>
+<meta itemprop="name" content="https连接提示pkix path错误">
+<meta itemprop="description" content="关于java中用httpclient访问https服务报错 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296) at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1514) at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216) at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1026) at sun.security.ssl.Handshaker.process_record(Handshaker.java:961) at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062) at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387) at">
+
+
+<meta itemprop="datePublished" content="2018-10-26T11:30:16&#43;08:00" />
+<meta itemprop="dateModified" content="2018-10-26T11:30:16&#43;08:00" />
+<meta itemprop="wordCount" content="645">
+
+
+
+<meta itemprop="keywords" content="https," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="https连接提示pkix path错误"/>
+<meta name="twitter:description" content="关于java中用httpclient访问https服务报错 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296) at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1514) at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216) at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1026) at sun.security.ssl.Handshaker.process_record(Handshaker.java:961) at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062) at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387) at"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">slm的研发笔记</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/">主页</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/post/">文章</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      slm的研发笔记
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/">主页</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/post/">文章</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">https连接提示pkix path错误</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-10-26 </span>
+        <div class="post-category">
+            <a href="https://007slm.github.io/categories/%E5%BC%80%E5%8F%91/"> 开发 </a>
+            
+          </div>
+        
+
+        
+        
+          <span id="busuanzi_container_page_pv">
+            | 阅读 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#解决办法">解决办法：</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<p>关于java中用httpclient访问https服务报错</p>
+
+<pre><code class="language-java">javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+    at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+    at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+    at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+    at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+    at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1514)
+    at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+    at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1026)
+    at sun.security.ssl.Handshaker.process_record(Handshaker.java:961)
+    at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+    at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+    at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+    at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+    at sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:559)
+    at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:185)
+    at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:153)
+    at TestSecuredConnection.testConnectionTo(TestSecuredConnection.java:30)
+    at TestSecuredConnection.main(TestSecuredConnection.java:16)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+    at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+    at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+    at sun.security.validator.Validator.validate(Validator.java:260)
+    at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+    at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+    at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+    at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1496)
+    ... 12 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+    at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+    at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+    at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+    at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+    ... 18 more
+</code></pre>
+
+<p><strong>PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</strong></p>
+
+<p>主要看这一句，是说没有找到的指定的证书。</p>
+
+<p>我们知道ssl握手是又服务端返回证书信息，客户端进行校验，这里有个隐藏的规则，因为证书是链式签发的</p>
+
+<p><strong>root ca&ndash;&gt;一级ca -—&gt;二级ca &ndash;&gt;我的网站</strong></p>
+
+<p>很多用户在部署证书的时候都只部署了自己的证书，这就造成浏览器一般会把受信任的证书补全，类似curl，httpclient等工具会利用操作系统本地的cert列表 eg：/etc/local/cert 来补全公信的证书，某些时候如果操作系统的cert不全或者java的security\cacert里面没有添加公信ca就会出现问题了。（不同版本的jre带的cacert可能会不一样，所以同样的代码 有些环境就不报错）</p>
+
+<h4 id="解决办法">解决办法：</h4>
+
+<p>服务器部署证书的时候部署全证书链，如下图即为典型的没有添加全证书链</p>
+
+<p>通过myssl校验证书信息</p>
+
+<p><img src="https://i.imgur.com/CESb3vS.png" alt="enter image description here" />
+在kong的certificate中补全证书链信息后就正常了 用java验证也通过：
+验证代码：</p>
+
+<pre><code class="language-java">public void testConnectionTo(String aURL) throws Exception {
+        URL destinationURL = new URL(aURL);
+        HttpsURLConnection conn = (HttpsURLConnection) destinationURL
+                .openConnection();
+        conn.connect();
+        Certificate[] certs = conn.getServerCertificates();
+        for (Certificate cert : certs) {
+            System.out.println(&quot;Certificate is: &quot; + cert);
+            if(cert instanceof X509Certificate) {
+                try {
+                    ( (X509Certificate) cert).checkValidity();
+                    System.out.println(&quot;Certificate is active for current date&quot;);
+                } catch(CertificateExpiredException cee) {
+                    System.out.println(&quot;Certificate is expired&quot;);
+                }
+            }
+        }
+    }
+</code></pre>
+
+<p>结果：</p>
+
+<pre><code class="language-java">[2]: ObjectId: 1.3.6.1.5.5.7.1.1 Criticality=false
+AuthorityInfoAccess [
+  [
+   accessMethod: ocsp
+   accessLocation: URIName: http://ocsp2.digicert.com
+, 
+   accessMethod: caIssuers
+   accessLocation: URIName: http://cacerts.digitalcertvalidation.com/TrustAsiaTLSRSACA.crt
+]
+]
+
+</code></pre>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">007slm</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-10-26</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">007slm@163.com</span>
+  </p>
+</div>
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://007slm.github.io/tags/https/">https</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/antlr/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">antlr备忘</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+            <span class="next-text nav-default">git常用命令</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  <div class="post bg-white">
+      <div id="comments-gitment"></div>
+      <link rel="stylesheet" href="/lib/gitment/gitment-0.0.3.min.css">
+        <script src="/lib/gitment/gitment-0.0.3.min.js"></script>
+      <script type="text/javascript">
+      const gitment = new Gitment({
+        id: 'java连接https服务pkix path错误.md',
+        title: 'https连接提示pkix path错误',
+        link: decodeURI(location.href),
+        desc: '关于java中用httpclient访问https服务报错 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296) at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1514) at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216) at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1026) at sun.security.ssl.Handshaker.process_record(Handshaker.java:961) at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062) at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387) at',
+        owner: '007slm',
+        repo: '007slm.github.io',
+        oauth: {
+          client_id: '951384fae5f8fdbe87ae',
+          client_secret: 'ba1bfd5ff22c74a967648ce7e10de50b279ae231'
+        }
+      })
+      gitment.render('comments-gitment')
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+    </div>
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:007slm@163.com" rel="me noopener" class="iconfont icon-email"
+        title="email" target="_blank">
+      </a>
+      <a href="https://github.com/007slm" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+      <a href="https://gitee.com/007slm" rel="me noopener" class="iconfont icon-coding"
+        title="coding" target="_blank">
+      </a>
+  <a href="https://007slm.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+  </div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2018 -
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">
+        007slm
+        
+      </span></span>
+
+  
+  
+    <span id="busuanzi_container">
+      访客数/访问量：<span id="busuanzi_value_site_uv"></span>/<span id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+  <script src="/js/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
