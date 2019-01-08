@@ -1,7 +1,7 @@
 
 ---
 title: "https连接提示pkix path错误"
-date: 2018-10-26T11:30:16+08:00
+date: 2019-01-08T11:30:16+08:00
 draft: false
 tags: ["https"]
 categories: ["开发"]
@@ -55,6 +55,8 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 
 **root ca-->一级ca -—>二级ca -->我的网站**
 
+#### 问题1
+
 很多用户在部署证书的时候都只部署了自己的证书，这就造成浏览器一般会把受信任的证书补全，类似curl，httpclient等工具会利用操作系统本地的cert列表 eg：/etc/local/cert 来补全公信的证书，某些时候如果操作系统的cert不全或者java的security\cacert里面没有添加公信ca就会出现问题了。（不同版本的jre带的cacert可能会不一样，所以同样的代码 有些环境就不报错）
 
 #### 解决办法：
@@ -99,3 +101,22 @@ AuthorityInfoAccess [
 ]
 
 ```
+
+### 问题2
+java中默认采用的cacert中没有对应的证书供应商的证书问题，需要导出证书文件才可以通过，推荐java中忽略ssl验证。
+
+### 备注
+java中默认请求https时候回失败，是因为默认java类库开启了ssl握手的校验，nginx中默认连接ssl的时候总是成功是默认没有校验证书
+
+
+```nginx
+
+Syntax:	proxy_ssl_verify on | off;
+Default:	
+proxy_ssl_verify off;
+Context:	http, server, location
+This directive appeared in version 1.7.0.
+
+```
+
+Enables or disables verification of the proxied HTTPS server certificate.
