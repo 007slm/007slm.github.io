@@ -6,10 +6,19 @@
     <description>Recent content in Posts on slm的研发笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 26 Oct 2018 11:30:16 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jan 2019 11:30:16 +0800</lastBuildDate>
     
 	<atom:link href="https://007slm.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>https连接提示pkix path错误</title>
+      <link>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Tue, 08 Jan 2019 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</guid>
+      <description>关于java中用httpclient访问https服务报错 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296) at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1514) at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216) at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1026) at sun.security.ssl.Handshaker.process_record(Handshaker.java:961) at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062) at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387) at</description>
+    </item>
     
     <item>
       <title>antlr备忘</title>
@@ -18,15 +27,6 @@
       
       <guid>https://007slm.github.io/post/antlr/</guid>
       <description>antlr 备忘 enter every rule enter expression exit expression exit every rule</description>
-    </item>
-    
-    <item>
-      <title>https连接提示pkix path错误</title>
-      <link>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</link>
-      <pubDate>Fri, 26 Oct 2018 11:30:16 +0800</pubDate>
-      
-      <guid>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</guid>
-      <description>关于java中用httpclient访问https服务报错 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302) at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296) at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1514) at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216) at sun.security.ssl.Handshaker.processLoop(Handshaker.java:1026) at sun.security.ssl.Handshaker.process_record(Handshaker.java:961) at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062) at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403) at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387) at</description>
     </item>
     
     <item>

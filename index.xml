@@ -35,30 +35,9 @@
     </item>
     
     <item>
-      <title>antlr备忘</title>
-      <link>https://007slm.github.io/post/antlr/</link>
-      <pubDate>Fri, 26 Oct 2018 11:30:16 +0800</pubDate>
-      
-      <guid>https://007slm.github.io/post/antlr/</guid>
-      
-        <description>
-
-&lt;h3 id=&#34;antlr-备忘&#34;&gt;antlr 备忘&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;enter every rule&lt;/li&gt;
-&lt;li&gt;enter expression&lt;/li&gt;
-&lt;li&gt;exit expression&lt;/li&gt;
-&lt;li&gt;exit every rule&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
       <title>https连接提示pkix path错误</title>
       <link>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</link>
-      <pubDate>Fri, 26 Oct 2018 11:30:16 +0800</pubDate>
+      <pubDate>Tue, 08 Jan 2019 11:30:16 +0800</pubDate>
       
       <guid>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</guid>
       
@@ -109,6 +88,8 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 
 &lt;p&gt;&lt;strong&gt;root ca&amp;ndash;&amp;gt;一级ca -—&amp;gt;二级ca &amp;ndash;&amp;gt;我的网站&lt;/strong&gt;&lt;/p&gt;
 
+&lt;h4 id=&#34;问题1&#34;&gt;问题1&lt;/h4&gt;
+
 &lt;p&gt;很多用户在部署证书的时候都只部署了自己的证书，这就造成浏览器一般会把受信任的证书补全，类似curl，httpclient等工具会利用操作系统本地的cert列表 eg：/etc/local/cert 来补全公信的证书，某些时候如果操作系统的cert不全或者java的security\cacert里面没有添加公信ca就会出现问题了。（不同版本的jre带的cacert可能会不一样，所以同样的代码 有些环境就不报错）&lt;/p&gt;
 
 &lt;h4 id=&#34;解决办法&#34;&gt;解决办法：&lt;/h4&gt;
@@ -155,6 +136,46 @@ AuthorityInfoAccess [
 ]
 
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;问题2&#34;&gt;问题2&lt;/h3&gt;
+
+&lt;p&gt;java中默认采用的cacert中没有对应的证书供应商的证书问题，需要导出证书文件才可以通过，推荐java中忽略ssl验证。&lt;/p&gt;
+
+&lt;h3 id=&#34;备注&#34;&gt;备注&lt;/h3&gt;
+
+&lt;p&gt;java中默认请求https时候回失败，是因为默认java类库开启了ssl握手的校验，nginx中默认连接ssl的时候总是成功是默认没有校验证书&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;
+Syntax: proxy_ssl_verify on | off;
+Default:    
+proxy_ssl_verify off;
+Context:    http, server, location
+This directive appeared in version 1.7.0.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Enables or disables verification of the proxied HTTPS server certificate.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>antlr备忘</title>
+      <link>https://007slm.github.io/post/antlr/</link>
+      <pubDate>Fri, 26 Oct 2018 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/antlr/</guid>
+      
+        <description>
+
+&lt;h3 id=&#34;antlr-备忘&#34;&gt;antlr 备忘&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;enter every rule&lt;/li&gt;
+&lt;li&gt;enter expression&lt;/li&gt;
+&lt;li&gt;exit expression&lt;/li&gt;
+&lt;li&gt;exit every rule&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
