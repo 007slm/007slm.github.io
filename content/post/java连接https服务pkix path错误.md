@@ -1,12 +1,12 @@
 
 ---  
-title: "https连接提示pkix path错误"  
-date: 2019-01-08T11:30:16+08:00  
-draft: false  
+title: "https连接提示pkix_path错误" 
+date: 2019-01-08T11:30:16+08:00 
+draft: false 
 tags: ["https"]  
 categories: ["开发"]  
-comment: true  
-  
+comment: true 
+
 ---  
   
   
