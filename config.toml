@@ -75,11 +75,16 @@ defaultContentLanguage = "zh-cn"           # Default language to use
     repo = "xianmin/comments-for-hugo-theme-jane"    # The repo to store comments
     issueTerm = "pathname"
 
-  [params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+  #gitment 域名过期暂时屏蔽
+  #[params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+  #  owner = "007slm"              # Your GitHub ID
+  #  repo = "007slm.github.io"               # The repo to store comments
+  #  clientId = "951384fae5f8fdbe87ae"           # Your client ID
+  #  clientSecret = "ba1bfd5ff22c74a967648ce7e10de50b279ae231"       # Your client secret
+
+  [params.gittalk]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
     owner = "007slm"              # Your GitHub ID
     repo = "007slm.github.io"               # The repo to store comments
-    clientId = "951384fae5f8fdbe87ae"           # Your client ID
-    clientSecret = "ba1bfd5ff22c74a967648ce7e10de50b279ae231"       # Your client secret
 
   [params.reward]                                         # 文章打赏
     enable = true
