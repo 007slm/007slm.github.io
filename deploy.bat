@@ -10,3 +10,4 @@ cd public
 git add .
 git commit -m "update public files"
 git push origin master --force
+cd ../
