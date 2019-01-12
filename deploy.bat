@@ -1,14 +1,12 @@
 #!/bin/bash
 copy .\jane_modify\comments.html .\themes\jane\layouts\partials\ /Y
-set SITE_SOURCE="g:/hugo/blog"
-set PUBLIC_DIR="g:/hugo/blog/public"
-cd %SITE_SOURCE%
+cd /d %~dp0
 hugo -t jane
 git add .
 git commit -m "add blog"
 git pull
 git push
-cd %PUBLIC_DIR%
+cd public
 git add .
 git commit -m "update public files"
 git push origin master --force
