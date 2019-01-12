@@ -81,7 +81,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   tencent_analytics = ""    # Tencent Analytics
   baidu_push = false        # baidu push                  # 百度
   baidu_analytics = ""      # Baidu Analytics
-  baidu_verification = ""   # Baidu Verification
+  baidu_verification = "fAfIDwVrbg"   # Baidu Verification
   google_verification = "lJm4hhZmg5xQnZ2GtU2Ay5eiVbr6wYfLFeehX-hrw64"  # Google_Verification         # 谷歌
 
   # Link custom CSS and JS assets
