@@ -70,6 +70,7 @@
       clientSecret: 'ef2a499b7921712bc7f85d497c53b0dd593c02ec',
       owner: '{{ .Site.Params.gittalk.owner }}',
       repo: '{{ .Site.Params.gittalk.repo }}',
+      admin: ['{{ .Site.Params.gittalk.owner }}'],
       id: location.pathname,      // Ensure uniqueness and length less than 50
       distractionFreeMode: false  // Facebook-like distraction free mode
     })
