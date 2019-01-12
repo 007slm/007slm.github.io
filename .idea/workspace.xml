@@ -28,8 +28,8 @@
       <file leaf-file-name="config.toml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.toml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4455733">
-              <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.4179971">
+              <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -247,7 +247,7 @@
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="271" selection-start-line="0" selection-start-column="271" selection-end-line="0" selection-end-column="271" />
           <folding>
-            <marker date="1547310329648" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1547311000855" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -414,8 +414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.toml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4455733">
-          <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.4179971">
+          <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
           <folding />
         </state>
       </provider>
