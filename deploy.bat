@@ -1,5 +1,5 @@
 #!/bin/bash
-
+copy .\jane_modify\comments.html .\themes\jane\layouts\partials\ /Y
 set SITE_SOURCE="g:/hugo/blog"
 set PUBLIC_DIR="g:/hugo/blog/public"
 cd %SITE_SOURCE%
