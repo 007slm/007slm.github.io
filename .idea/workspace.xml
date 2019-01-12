@@ -5,7 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/jane" afterPath="$PROJECT_DIR$/themes/jane" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public" afterPath="$PROJECT_DIR$/public" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jane_modify/comments.html" afterPath="$PROJECT_DIR$/jane_modify/comments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy.bat" afterPath="$PROJECT_DIR$/deploy.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="007slm.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +39,8 @@
       <file leaf-file-name="comments.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jane_modify/comments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5323276">
-              <caret line="73" column="19" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.57327586">
+              <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -112,7 +112,7 @@
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="271" selection-start-line="0" selection-start-column="271" selection-end-line="0" selection-end-column="271" />
               <folding>
-                <marker date="1547292452849" expanded="true" signature="264:270" placeholder="..." />
+                <marker date="1547292915241" expanded="true" signature="264:270" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -329,7 +329,7 @@
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="271" selection-start-line="0" selection-start-column="271" selection-end-line="0" selection-end-column="271" />
           <folding>
-            <marker date="1547292452849" expanded="true" signature="264:270" placeholder="..." />
+            <marker date="1547292915241" expanded="true" signature="264:270" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -400,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jane_modify/comments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5323276">
-          <caret line="73" column="19" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.57327586">
+          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
           <folding />
         </state>
       </provider>

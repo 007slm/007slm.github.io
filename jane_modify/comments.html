@@ -72,6 +72,7 @@
       repo: '{{ .Site.Params.gittalk.repo }}',
       admin: ['{{ .Site.Params.gittalk.owner }}'],
       id: decodeURI(location.pathname), // Ensure uniqueness and length less than 50
+      body:decodeURI(location.pathname),
       distractionFreeMode: true  // Facebook-like distraction free mode
     })
     gitalk.render('comments-gittalk')
