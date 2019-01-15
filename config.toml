@@ -86,7 +86,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
+  customCSS = ['weixin.css']            # if ['custom.css'], load '/static/css/custom.css' file
   customJS = ['busuanzi.pure.mini.js']             # if ['custom.js'], load '/static/js/custom.js' file
   
   [params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es

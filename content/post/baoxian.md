@@ -3,8 +3,11 @@ title: "保险"
 date: 2019-01-15T21:30:16+08:00
 draft: false
 tags: ["保险"]
+toc: false
 categories: ["保险"]
 comment: false
+contentCopyright: false
+reward: false
 
 ---
 
@@ -73,7 +76,7 @@ comment: false
 
   
 
-![](https://mmbiz.qpic.cn/mmbiz_png/gq1m91rxxicUXce62GxKRIHhz28Djjsu2nkL1DhaickrsqU7VZY4a0nGTnljIHr134GsZerefSDRBwDaoeicibkYvQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/image/zhongji.webp)
 
 2007年以后，大陆卖出的所有重疾险保单，都包含了上面的25种高发重大疾病。
 
