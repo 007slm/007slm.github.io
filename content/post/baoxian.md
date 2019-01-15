@@ -1,10 +1,10 @@
 ---
 title: "保险"
-date: 2018-10-26T11:30:16+08:00
+date: 2019-01-15T21:30:16+08:00
 draft: false
 tags: ["保险"]
 categories: ["保险"]
-comment: true
+comment: false
 
 ---
 
@@ -276,7 +276,7 @@ comment: true
 
 简毕业于山东大学财务专业，是个当之无愧的保险专业人士；先后在中资外资中外合资保险公司都干过，积累了大量的专业知识和实践经验。  
 
-![](./jian.jpg)
+![](/image/jian.jpg)
 
 
-**如果你正要了解保险，不妨加微信给您介绍一些看看![](https://mmbiz.qpic.cn/mmbiz_png/f7S9WVpDh3hGw6jLRY0pDLLfVlMAkWkOo5y0PlOBGhKA389xergZwIciceKCppSMq9u1Onm3Z34uu5WCwrTnQ3g/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)![](https://mmbiz.qpic.cn/mmbiz_png/f7S9WVpDh3hGw6jLRY0pDLLfVlMAkWkOo5y0PlOBGhKA389xergZwIciceKCppSMq9u1Onm3Z34uu5WCwrTnQ3g/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)**
+**如果你正要了解保险，不妨加微信给您介绍一些看看!**
