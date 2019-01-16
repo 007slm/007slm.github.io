@@ -127,15 +127,15 @@
   </url>
   
   <url>
-    <loc>https://007slm.github.io/tags/nginx/</loc>
-    <lastmod>2018-09-09T11:30:16+08:00</lastmod>
+    <loc>https://007slm.github.io/categories/nginx/</loc>
+    <lastmod>2018-09-14T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://007slm.github.io/categories/nginx/</loc>
-    <lastmod>2018-09-14T11:30:16+08:00</lastmod>
+    <loc>https://007slm.github.io/tags/nginx/</loc>
+    <lastmod>2018-09-09T11:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -169,14 +169,14 @@
   </url>
   
   <url>
-    <loc>https://007slm.github.io/tags/%E4%BF%9D%E9%99%A9/</loc>
+    <loc>https://007slm.github.io/categories/%E4%BF%9D%E9%99%A9/</loc>
     <lastmod>2019-01-15T21:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://007slm.github.io/categories/%E4%BF%9D%E9%99%A9/</loc>
+    <loc>https://007slm.github.io/tags/%E4%BF%9D%E9%99%A9/</loc>
     <lastmod>2019-01-15T21:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
