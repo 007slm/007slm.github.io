@@ -6,10 +6,19 @@
     <description>Recent content in 开发 on slm的研发笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 26 Oct 2018 11:30:16 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 11:30:16 +0800</lastBuildDate>
     
 	<atom:link href="https://007slm.github.io/categories/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>微信小程序支付坑</title>
+      <link>https://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%9D%91/</link>
+      <pubDate>Wed, 16 Jan 2019 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%9D%91/</guid>
+      <description>##微信小程序支付坑： 首先：微信的支付 都是微信的端appid和微信商户号mch_id配对使用才能完成支付的。 今天遇到的问题是：微信小程序支付</description>
+    </item>
     
     <item>
       <title>antlr备忘</title>
@@ -26,7 +35,7 @@
       <pubDate>Tue, 09 Oct 2018 11:30:16 +0800</pubDate>
       
       <guid>https://007slm.github.io/post/%E5%90%8E%E7%AB%AF%E5%88%86%E7%89%87%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0%E8%BF%9B%E5%BA%A6%E6%9D%A1%E8%83%BD%E5%8A%9B/</guid>
-      <description>关于后端进度条的实现 java代码部分 for (int i =0;i&amp;lt;10;i++) { try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); } writer.print(i); writer.flush(); } 重点写一个trunk后要及时flush js部分 得益于fetch api</description>
+      <description>关于后端进度条的实现 java代码部分 1 2 3 4 5 6 7 8 9 for (int i =0;i&amp;lt;10;i++) { try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); } writer.print(i); writer.flush(); } 重点写一个trunk后要及时flush js部分 得益</description>
     </item>
     
     <item>

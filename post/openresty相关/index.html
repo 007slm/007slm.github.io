@@ -29,8 +29,8 @@
 
 
 
-
-
+<meta name="baidu-site-verification" content="fAfIDwVrbg" />
+<meta name="google-site-verification" content="lJm4hhZmg5xQnZ2GtU2Ay5eiVbr6wYfLFeehX-hrw64" />
 
 
 <meta name="generator" content="Hugo 0.48" />
@@ -40,7 +40,7 @@
 
 
 
-<link rel="icon" href="/favicon.ico" />
+<link rel="icon" href="https://007slm.github.io/favicon.ico" />
 
 
 
@@ -51,9 +51,11 @@
 
 
 
-<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+<link href="https://007slm.github.io/dist/jane.min.css?v=2.7.0" rel="stylesheet">
 
 
+
+<link rel="stylesheet" href="https://007slm.github.io/css/weixin.css">
 
 
 <meta property="og:title" content="nginx &#43; openresty 备忘" />
@@ -67,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2018-09-09T11:30:16&#43;08:00" />
 <meta itemprop="dateModified" content="2018-09-09T11:30:16&#43;08:00" />
-<meta itemprop="wordCount" content="1452">
+<meta itemprop="wordCount" content="1479">
 
 
 
@@ -86,13 +88,24 @@
 <![endif]-->
 
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-132339577-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 
 
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">slm的研发笔记</a>
+    <a href="https://007slm.github.io/" class="logo">slm的研发笔记</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -106,21 +119,7 @@
         
           
           
-            <a class="menu-item-link" href="https://007slm.github.io/">主页</a>
-          
-        
-      </li><li class="mobile-menu-item">
-        
-          
-          
-            <a class="menu-item-link" href="https://007slm.github.io/post/">文章</a>
-          
-        
-      </li><li class="mobile-menu-item">
-        
-          
-          
-            <a class="menu-item-link" href="https://007slm.github.io/tags/">标签</a>
+            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
           
         
       </li><li class="mobile-menu-item">
@@ -134,7 +133,21 @@
         
           
           
-            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://007slm.github.io/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/">主页</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/post/">文章</a>
           
         
       </li>
@@ -151,8 +164,8 @@
 
 
 
-  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
-  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+  <link rel="stylesheet" href="https://007slm.github.io/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://007slm.github.io/lib/photoswipe/default-skin/default-skin.min.css" />
 
 
 
@@ -207,7 +220,7 @@
 
   <header id="header" class="header container">
     <div class="logo-wrapper">
-  <a href="/" class="logo">
+  <a href="https://007slm.github.io/" class="logo">
     
       slm的研发笔记
     
@@ -221,29 +234,7 @@
         
           
           
-            <a class="menu-item-link" href="https://007slm.github.io/">主页</a>
-          
-
-        
-
-      </li>
-    
-      <li class="menu-item">
-        
-          
-          
-            <a class="menu-item-link" href="https://007slm.github.io/post/">文章</a>
-          
-
-        
-
-      </li>
-    
-      <li class="menu-item">
-        
-          
-          
-            <a class="menu-item-link" href="https://007slm.github.io/tags/">标签</a>
+            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
           
 
         
@@ -265,7 +256,29 @@
         
           
           
-            <a class="menu-item-link" href="https://007slm.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://007slm.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/">主页</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://007slm.github.io/post/">文章</a>
           
 
         
@@ -293,13 +306,10 @@
             <a href="https://007slm.github.io/categories/%E5%BC%80%E5%8F%91/"> 开发 </a>
             
           </div>
-        
+        <span class="more-meta"> 约 1479 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
 
         
-        
-          <span id="busuanzi_container_page_pv">
-            | 阅读 <span id="busuanzi_value_page_pv"></span>
-          </span>
         
 
         
@@ -335,14 +345,22 @@
 <h3 id="nginx-openresty-备忘">nginx + openresty 备忘</h3>
 
 <p>nginx的开发者提供了一种简单、粗暴的方式来实现日志文件的切换。来自官网的一篇文章Log Rotation介绍了这种方法，核心脚本如下：</p>
-
-<pre><code>mv access.log access.log.0
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">mv access.log access.log.0
 kill -USR1 `cat master.nginx.pid`
 sleep 1# 
 do something with access.log.0
-gzip access.log.0
-</code></pre>
-
+gzip access.log.0</pre></td></tr></table>
+</div>
+</div>
 <hr />
 
 <h3 id="nginx指令">nginx指令</h3>
@@ -365,16 +383,26 @@ headers[&ldquo;X-Credential-Username&rdquo;];
 <p><strong>ngx.var.VARIABLE</strong>
 Read and write Nginx variable values.
 Note that only already defined nginx variables can be written to. For example:</p>
-
-<pre><code> location /foo {
-     set $my_var ''; # this line is required to create $my_var at config time
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"> location /foo {
+     set $my_var &#39;&#39;; # this line is required to create $my_var at config time
      content_by_lua_block {
          ngx.var.my_var = 123;
          ...
      }
- }
-</code></pre>
-
+ }</pre></td></tr></table>
+</div>
+</div>
 <h1 id="使用-nginx-内置绑定变量">使用 Nginx 内置绑定变量</h1>
 
 <p><code>Nginx</code>作为一个成熟、久经考验的负载均衡软件，与其提供丰富、完整的内置变量是分不开的，它极大增加了对<code>Nginx</code>网络行为的控制细度。这些变量大部分都是在请求进入时解析的，并把他们缓存到请求<code>cycle</code>中，方便下一次获取使用。首先来看看<code>Nginx</code>对都开放了那些<code>API</code>。</p>
@@ -582,28 +610,49 @@ Note that only already defined nginx variables can be written to. For example:</
 <p>首先，在<code>OpenResty</code>中如何引用这些变量呢？参考 <a href="https://github.com/openresty/lua-nginx-module#ngxvarvariable">ngx.var.VARIABLE</a> 小节。</p>
 
 <p>利用这些内置变量，来做一个简单的数学求和运算例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-nginx" data-lang="nginx"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-nginx" data-lang="nginx">    <span class="k">server</span> <span class="p">{</span>
+        <span class="kn">listen</span>    <span class="mi">80</span><span class="p">;</span>
+        <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
 
-<pre><code class="language-nginx">    server {
-        listen    80;
-        server_name  localhost;
-
-        location /sum {
-            #处理业务
-           content_by_lua_block {
-                local a = tonumber(ngx.var.arg_a) or 0
-                local b = tonumber(ngx.var.arg_b) or 0
-                ngx.say(&quot;sum: &quot;, a + b )
-            }
-        }
-    }
-</code></pre>
-
+        <span class="kn">location</span> <span class="s">/sum</span> <span class="p">{</span>
+            <span class="c1">#处理业务
+</span><span class="c1"></span>           <span class="kn">content_by_lua_block</span> <span class="p">{</span>
+                <span class="kn">local</span> <span class="s">a</span> <span class="p">=</span> <span class="s">tonumber(ngx.var.arg_a)</span> <span class="s">or</span> <span class="mi">0</span>
+                <span class="s">local</span> <span class="s">b</span> <span class="p">=</span> <span class="s">tonumber(ngx.var.arg_b)</span> <span class="s">or</span> <span class="mi">0</span>
+                <span class="s">ngx.say(&#34;sum:</span> <span class="s">&#34;,</span> <span class="s">a</span> <span class="s">+</span> <span class="s">b</span> <span class="s">)</span>
+            <span class="err">}</span>
+        <span class="err">}</span>
+    <span class="err">}</span></code></pre></td></tr></table>
+</div>
+</div>
 <p>验证一下：</p>
-
-<pre><code class="language-shell">➜  ~  curl 'http://127.0.0.1/sum?a=11&amp;b=12'
-sum: 23
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">➜  ~  curl <span class="s1">&#39;http://127.0.0.1/sum?a=11&amp;b=12&#39;</span>
+sum: <span class="m">23</span></code></pre></td></tr></table>
+</div>
+</div>
 <p><strong>特别注意</strong>
 access_by_lua_content阶段取不到location中通过proxy_set_header设置的值</p>
 
@@ -656,12 +705,12 @@ syntax: ngx.header.HEADER = VALUE</p>
     
     
       <label class="qr-code-image" for="reward">
-        <img class="image" src="/image/wechat.jpg">
+        <img class="image" src="https://007slm.github.io/image/wechat.jpg">
         <span>微信打赏</span>
       </label>
     
       <label class="qr-code-image" for="reward">
-        <img class="image" src="/image/alipay.jpg">
+        <img class="image" src="https://007slm.github.io/image/alipay.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
@@ -677,14 +726,14 @@ syntax: ngx.header.HEADER = VALUE</p>
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/%E5%BE%AE%E4%BF%A1%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/">
+          <a class="prev" href="https://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">微信体系梳理</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/">
-            <span class="next-text nav-default"></span>
+          <a class="next" href="https://007slm.github.io/post/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+            <span class="next-text nav-default">多线程</span>
             <span class="prev-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -700,27 +749,27 @@ syntax: ngx.header.HEADER = VALUE</p>
 
   
 
-  <div class="post bg-white">
-      <div id="comments-gitment"></div>
-      <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-        <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-      <script type="text/javascript">
-      const gitment = new Gitment({
-        id: 'openresty相关.md',
-        title: 'nginx \x2b openresty 备忘',
-        link: decodeURI(location.href),
-        desc: 'nginx \x2b openresty 备忘 nginx的开发者提供了一种简单、粗暴的方式来实现日志文件的切换。来自官网的一篇文章Log Rotation介绍了这种方法，核心脚本',
-        owner: '007slm',
-        repo: '007slm.github.io',
-        oauth: {
-          client_id: '951384fae5f8fdbe87ae',
-          client_secret: 'ba1bfd5ff22c74a967648ce7e10de50b279ae231'
-        }
-      })
-      gitment.render('comments-gitment')
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
-    </div>
+  
+
+
+<div class="post bg-white">
+  <div id="comments-gittalk"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script type="text/javascript">
+    const gitalk = new Gitalk({
+      clientID: 'a81f844903c9e3cf0b53',
+      clientSecret: 'ef2a499b7921712bc7f85d497c53b0dd593c02ec',
+      owner: '007slm',
+      repo: '007slm.github.io',
+      admin: ['007slm'],
+      id: decodeURI(location.pathname), 
+      body:decodeURI(location.href),
+      distractionFreeMode: true  
+    })
+    gitalk.render('comments-gittalk')
+  </script>
+</div>
 
   
 
@@ -767,10 +816,6 @@ syntax: ngx.header.HEADER = VALUE</p>
 
   
   
-    <span id="busuanzi_container">
-      访客数/访问量：<span id="busuanzi_value_site_uv"></span>/<span id="busuanzi_value_site_pv"></span>
-    </span>
-  
 </div>
 
     </footer>
@@ -780,32 +825,39 @@ syntax: ngx.header.HEADER = VALUE</p>
     </div>
   </div>
   
-<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+<script type="text/javascript" src="https://007slm.github.io/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://007slm.github.io/lib/slideout/slideout-1.0.1.min.js"></script>
+<script type="text/javascript" src="https://007slm.github.io/dist/jane.min.js?v=2.7.0"></script><script id="baidu_analytics">
+  var _hmt = _hmt || [];
+  (function() {
+    if (window.location.hostname === 'localhost') return;
+    var hm = document.createElement("script"); hm.async = true;
+    hm.src = "https://hm.baidu.com/hm.js?598a8fa6c98e320388fd3b48dfe3b5ee";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
 
 
 
 
 
   
-    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
-    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
-    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+    <script type="text/javascript" src="https://007slm.github.io/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="https://007slm.github.io/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="https://007slm.github.io/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
 
 
 
 
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
 
 
-
-  <script src="/js/busuanzi.pure.mini.js"></script>
+  <script src="https://007slm.github.io/js/busuanzi.pure.mini.js"></script>
 
 
 </body>

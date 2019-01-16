@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>保险 on slm的研发笔记</title>
+    <link>https://007slm.github.io/categories/%E4%BF%9D%E9%99%A9/</link>
+    <description>Recent content in 保险 on slm的研发笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 15 Jan 2019 21:30:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://007slm.github.io/categories/%E4%BF%9D%E9%99%A9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>保险</title>
+      <link>https://007slm.github.io/post/baoxian/</link>
+      <pubDate>Tue, 15 Jan 2019 21:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/baoxian/</guid>
+      <description>程序员猝死，谁为你的过劳买单？ 猝死、过劳昏倒、腰椎病、脊椎病……加班过劳谁来买单？ 保险。（讲讲怎么买对重疾险，干货！） 社保大家都有，但在大病</description>
+    </item>
+    
+  </channel>
+</rss>

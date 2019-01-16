@@ -6,10 +6,28 @@
     <description>Recent content in Posts on slm的研发笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 26 Oct 2018 11:30:16 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 11:30:16 +0800</lastBuildDate>
     
 	<atom:link href="https://007slm.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>微信小程序支付坑</title>
+      <link>https://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%9D%91/</link>
+      <pubDate>Wed, 16 Jan 2019 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%9D%91/</guid>
+      <description>##微信小程序支付坑： 首先：微信的支付 都是微信的端appid和微信商户号mch_id配对使用才能完成支付的。 今天遇到的问题是：微信小程序支付</description>
+    </item>
+    
+    <item>
+      <title>保险</title>
+      <link>https://007slm.github.io/post/baoxian/</link>
+      <pubDate>Tue, 15 Jan 2019 21:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/baoxian/</guid>
+      <description>程序员猝死，谁为你的过劳买单？ 猝死、过劳昏倒、腰椎病、脊椎病……加班过劳谁来买单？ 保险。（讲讲怎么买对重疾险，干货！） 社保大家都有，但在大病</description>
+    </item>
     
     <item>
       <title>antlr备忘</title>
@@ -44,7 +62,7 @@
       <pubDate>Tue, 09 Oct 2018 11:30:16 +0800</pubDate>
       
       <guid>https://007slm.github.io/post/%E5%90%8E%E7%AB%AF%E5%88%86%E7%89%87%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0%E8%BF%9B%E5%BA%A6%E6%9D%A1%E8%83%BD%E5%8A%9B/</guid>
-      <description>关于后端进度条的实现 java代码部分 for (int i =0;i&amp;lt;10;i++) { try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); } writer.print(i); writer.flush(); } 重点写一个trunk后要及时flush js部分 得益于fetch api</description>
+      <description>关于后端进度条的实现 java代码部分 1 2 3 4 5 6 7 8 9 for (int i =0;i&amp;lt;10;i++) { try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); } writer.print(i); writer.flush(); } 重点写一个trunk后要及时flush js部分 得益</description>
     </item>
     
     <item>
@@ -90,6 +108,15 @@
       
       <guid>https://007slm.github.io/post/openresty%E7%9B%B8%E5%85%B3/</guid>
       <description>nginx + openresty 备忘 nginx的开发者提供了一种简单、粗暴的方式来实现日志文件的切换。来自官网的一篇文章Log Rotation介绍了这种方法，核心脚本</description>
+    </item>
+    
+    <item>
+      <title>多线程</title>
+      <link>https://007slm.github.io/post/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Sun, 19 Nov 2017 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description>一个对象一把锁 static上加sync 代表类锁 脏读问题 （数据库一致性） volatile 是变量在多个线程间可见</description>
     </item>
     
     <item>

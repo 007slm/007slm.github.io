@@ -6,10 +6,19 @@
     <description>Recent content in 微信 on slm的研发笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 14 Sep 2018 10:43:33 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 11:30:16 +0800</lastBuildDate>
     
 	<atom:link href="https://007slm.github.io/tags/%E5%BE%AE%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>微信小程序支付坑</title>
+      <link>https://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%9D%91/</link>
+      <pubDate>Wed, 16 Jan 2019 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%9D%91/</guid>
+      <description>##微信小程序支付坑： 首先：微信的支付 都是微信的端appid和微信商户号mch_id配对使用才能完成支付的。 今天遇到的问题是：微信小程序支付</description>
+    </item>
     
     <item>
       <title>微信体系梳理</title>
