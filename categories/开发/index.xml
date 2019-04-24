@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>https连接提示pkix_path错误</title>
+      <link>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Tue, 08 Jan 2019 11:30:16 +0800</pubDate>
+      
+      <guid>https://007slm.github.io/post/java%E8%BF%9E%E6%8E%A5https%E6%9C%8D%E5%8A%A1pkix-path%E9%94%99%E8%AF%AF/</guid>
+      <description>关于java中用httpclient访问https服务报错 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable</description>
+    </item>
+    
+    <item>
       <title>antlr备忘</title>
       <link>https://007slm.github.io/post/antlr/</link>
       <pubDate>Fri, 26 Oct 2018 11:30:16 +0800</pubDate>
